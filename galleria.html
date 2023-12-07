@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Füzi Blanka">
+    <meta name="description" content="Gallus gallus domesticus, házityúk ismertető">
+    <meta name="copyright" content="Oktatási célokra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="chickenstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="kepek/favicon/favicon.ico" type="image/x-icon">
+
+    <title>Galléria | Gallus</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#images').galleria(
+                width = 500,
+                height = 500
+            );
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <p>Gallus Gallus Domesticus</p>
+    </header>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="famouschickens.html">Híres Csirkék</a></li>
+                <li class="current"><a href="#">Galléria</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+            </ul>
+        </nav>
+    </div>
+    <article class="gall">Az alábbi gallériában a weboldal készítőjének saját tyúkjait lehet megtekinteni.</article>
+    <article id="images" class="galleria">
+        <img src="kepek/galleria/family.JPG" alt="egy csoport tyúk eszeget" title="élelemszerzés">
+        <img src="kepek/galleria/alex.JPG" alt="tyúk és kutya" title="testvér">
+        <img src="kepek/galleria/casanova.jpg" alt="tyúkfej" title="Casa nova">
+        <img src="kepek/galleria/baba.JPG" alt="baba tyúk" title="csibe">
+        <img src="kepek/galleria/hamud.jpg" alt="tyúkfej" title="Hamud">
+        <img src="kepek/galleria/habibi.JPG" alt="kendermagos" title="Habibi">
+        <img src="kepek/galleria/paradicsom.JPG" alt="tyúk paradicsom ágyásban" title="paradicsom szerzés">
+        <img src="kepek/galleria/kacsok.jpg" alt="egy csoport tyúk futókacsákkal" title="Futókacsákkal">
+    </article>
+    <footer>
+        <p>Kizárólag oktatási célokat szolgál<br>© Füzi Blanka 2023</p>
+    </footer>
+</body>
+
+</html>

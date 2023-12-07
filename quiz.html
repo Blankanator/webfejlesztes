@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Füzi Blanka">
+    <meta name="description" content="Gallus gallus domesticus, házityúk ismertető">
+    <meta name="copyright" content="Oktatási célokra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="chickenstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="kepek/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="kepek/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="kepek/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="kepek/favicon/favicon.ico" type="image/x-icon">
+
+    <title>Quiz | Gallus</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    vnev: "required",
+                    knev: "required",
+                    email: { required: true, email: true, },
+                    tel: "required",
+                    megye: { required: true, },
+                    varos: "required",
+                    irsz: "required",
+                    utca: "required",
+                    hsz: "required",
+                    aszf: { required: true, },
+                },
+                messages: {
+                    vnev: "Kérlek add meg a vezetéknevedet!",
+                    knev: "Kérlek add meg a keresztnevedet!",
+                    email: "Kérlek add meg az email címedet !",
+                    tel: "Kérlek add meg a telefonszámodat!",
+                    megye: "Kérlek add meg a megyét!",
+                    varos: "Kérlek add meg a várost!",
+                    irsz: "Kérlek add meg a irányítószámot!",
+                    utca: "Kérlek add meg a községet!",
+                    hsz: "Kérlek add meg a házszámot!",
+                    aszf: "Kérlek fogadd el az Általános Szerződési Feltételeket!",
+
+                },
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <p>Gallus Gallus Domesticus</p>
+    </header>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="famouschickens.html">Híres Csirkék</a></li>
+                <li><a href="galleria.html">Galléria</a></li>
+                <li class="current"><a href="#">Quiz</a></li>
+                <li><a href="rendeles.html">Rendelés</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <form action="#">
+        <article class="quiz">
+            <h2>Itt egy quiz, ahol megtudhatod melyik csirke vagy te.</h2>
+            1. Mennyire meleg vízzel fürdesz?<br>
+            <label><input type="radio" name="bath" id="a1">forró</label><br>
+            <label><input type="radio" name="bath" id="a2">langyos</label><br>
+            <label><input type="radio" name="bath" id="a3">jeges</label><br><br>
+
+            2. Szoktál sapkát hordani?<br>
+            <label><input type="radio" name="hat" id="b1">soha</label><br>
+            <label><input type="radio" name="hat" id="b2">néha</label><br>
+            <label><input type="radio" name="hat" id="b3">mindig</label><br><br>
+
+            3. Szoktál-e télen sálat hordani?<br>
+            <label><input type="radio" name="scarf" id="c1">soha</label><br>
+            <label><input type="radio" name="scarf" id="c2">néha</label><br>
+            <label><input type="radio" name="scarf" id="c3">mindig</label><br><br>
+
+            4. Mennyire szereted a színes ruhákat?<br>
+            <label><input type="radio" name="color" id="d1">fekete minden</label><br>
+            <label><input type="radio" name="color" id="d2">szo-szo</label><br>
+            <label><input type="radio" name="color" id="d3">szivárvány vagyok</label><br><br>
+
+            5. Szereted a puha állatokat?<br>
+            <label><input type="radio" name="soft" id="e1">IGEN</label><br>
+            <label><input type="radio" name="soft" id="e2">megsimogatom</label><br>
+            <label><input type="radio" name="soft" id="e3">inkább kerülöm</label><br><br>
+
+            6. Van pajeszod?<br>
+            <label><input type="radio" name="pajesz" id="f1">persze</label><br>
+            <label><input type="radio" name="pajesz" id="f2">még úton</label><br>
+            <label><input type="radio" name="pajesz" id="f3">nein</label><br><br>
+
+
+            7. Magasabb vagy 180 centinél?<br>
+            <label><input type="radio" name="cm" id="g1">jaja</label><br>
+            <label><input type="radio" name="cm" id="g2">pont annyi vagyok</label><br>
+            <label><input type="radio" name="cm" id="g3">még növésben...</label><br><br>
+
+            8. Mekkora a lábad?<br>
+            <label><input type="radio" name="foot" id="h1">42+</label><br>
+            <label><input type="radio" name="foot" id="h2">38-41</label><br>
+            <label><input type="radio" name="foot" id="h3">37 vagy kisebb</label><br><br>
+
+            <p class="kozep">
+                <input class="button" type="button" value="Mehet" id="melyiktyuk">
+                <input class="button" type="reset" value="Újrakezdés">
+            </p>
+        </article>
+        <article class="quiz">
+            <h3 id="megoldas"></h3>
+            <h3 id="info"></h3>
+            <figure><img class="trans" id="tyukkep" src="kepek/barn.jpg" alt="tyuk"></figure>
+        </article>
+    </form>
+
+    <script src="script.js">
+    </script>
+    <footer>
+        <p>Kizárólag oktatási célokat szolgál<br>© Füzi Blanka 2023</p>
+    </footer>
+</body>
+
+</html>

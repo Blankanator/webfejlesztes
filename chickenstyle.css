@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+/*====ALTALANOS_ELEMEK====*/
+html {
+    padding: 0px;
+    margin: 0px;
+    color: #001219;
+    background-color: #e9d8a6;
+    font-size: 1.2em;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("kepek/header_pic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
+
+
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-size: 4vw;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #e9d8a6;
+}
+
+footer {
+    background-color: #ca6702;
+    margin-top: 2%;
+    font-size: 0.8em;
+    text-align: center;
+    color: #e9d8a6;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+/*====MENU====*/
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav ul li {
+    padding: 2px;
+
+}
+
+nav li a {
+    display: block;
+    color: #001219;
+    background-color: #0A9396;
+    text-align: center;
+    text-decoration: none;
+    /*border-style: solid;*/
+    /*border-color: rgb(255, 255, 255);*/
+    padding: 5px;
+
+    border-radius: 4px;
+    border: #0A9396 solid 1px;
+}
+
+nav li a:hover,
+nav li#active:hover {
+    color: #001219;
+    background-color: #005F73;
+
+}
+
+nav ul li.current a,
+nav ul li a:active {
+    background-color: #001219;
+    color: #e9d8a6;
+    border-radius: 4px;
+    border: #001219 solid 1px;
+}
+
+/*====OLDALELEMEK====*/
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    color: #001219;
+    background-color: #94D2BD;
+    border-radius: 8px;
+    text-align: justify;
+    padding: 1% 2% 1% 2%;
+    margin: 1%;
+    width: 100%;
+}
+
+aside {
+    display: flex;
+    background-color: #EE9B00;
+    padding: 1% 2% 1% 2%;
+    margin: 1%;
+    /*text-align: center;*/
+    /*font-size: 0.84em;*/
+    border-radius: 15px;
+    flex: 1 1 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 50%;
+}
+
+img.trans:hover {
+    transform: scale(1.25);
+    transition: 1s;
+}
+
+
+
+/*hires csirkek - oldal*/
+aside.mc img {
+    width: 20%;
+}
+
+table.petofi,
+tr,
+td {
+    border: 0px solid;
+    font-size: 0.9em;
+}
+
+th,
+td {
+    padding: 20px 0px 0px 0px;
+}
+
+table.petofi {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*galleria - oldal*/
+.gall {
+    width: 96.5vw;
+    padding: 1px 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #94D2BD;
+    font-size: 0.9em;
+}
+
+
+.galleria {
+    width: 96.5vw;
+    height: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #94D2BD;
+}
+
+.galleria-container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/*quiz - oldal*/
+article.quiz {
+    width: 96.5%;
+}
+
+figure {
+    text-align: center;
+}
+
+/*rendeles - oldal*/
+table.order {
+    /*border: 1px solid;*/
+    width: 100%;
+    font-size: 1.2em;
+}
+
+label.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+article.order {
+    width: 96.5vw;
+    justify-content: flex-start;
+}
+
+/*td.orderr, td.orderl {
+    border: 1px solid;
+    width: 50%;
+}*/
+
+input.textbox {
+    width: 90%;
+    border: rgb(255, 255, 255) solid 1px;
+    border-radius: 4px;
+}
+
+input.button {
+    background-color: #001219;
+    color: #0A9396;
+    border-radius: 4px;
+    border: #001219 solid 1px;
+    font-size: 1.2em;
+}
+
+input.button:hover {
+    color: #e9d8a6;
+    background-color: #005F73;
+}
+
+input.lista {
+    width: 50%;
+    border-radius: 4px;
+    border: rgb(255, 255, 255) solid 1px;
+}
+
+input.szam {
+    width: 3em;
+    border-radius: 4px;
+    border: rgb(255, 255, 255) solid 1px;
+}
+
+/*====RESZPONZIVITAS====*/
+
+@media only screen and (min-width: 600px) {
+
+    /* tablet */
+    article,
+    aside {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        flex-basis: 33.33%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* számítógép */
+    article {
+        flex-basis: 70%;
+    }
+
+    aside {
+        flex-basis: 25%;
+        padding: 0px;
+    }
+    table.petofi {
+        font-size: 1em;
+        width: 50%;
+    }
+    input.textbox {
+        width: 40%;
+    }
+    table.order {
+        width: 40%;
+        font-size: 1.2em;
+    }
+}
