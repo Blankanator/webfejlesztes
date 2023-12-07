@@ -3,7 +3,7 @@
 
 oldal keszitoje: Füzi Blanka
 
-url: https://github.com/...
+url: blankanator.github.io/webfejlesztes/
 
 leiras: A weblap csirkekrol szol, az otlet a hazi tyuktartasbol jott. Altalanos ismerteto, hires csirkek, sajat galleriat, quizt es egy rendelesi kerdoivet tartalmaz. 
 
